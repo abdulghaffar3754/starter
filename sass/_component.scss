@@ -92,7 +92,7 @@ align-items: center;
 
     }
     &_notification{
-        font-size: 1.25rem;
+        font-size: 1.0rem;
         height: 1.75rem;
         width: 1.75rem;
         border-radius: 50%;
@@ -113,8 +113,8 @@ align-items: center;
 
     }
     &_user-photo{
-        height: 3rem;
-        width: 3rem;
+        height: 4rem;
+        width: 4rem;
         margin-right: 1rem;
         border-radius: 100%;
 
@@ -172,7 +172,7 @@ align-items: center;
         display: flex;
         align-items: center;
         position: relative;
-        z-index: 9;
+        z-index: 10;
         
     }
     
@@ -187,7 +187,100 @@ align-items: center;
     font-size: 1.2rem;
     text-align: center;
     padding: 2.5rem;
-    color: var(--grey-light4);
+    color: var(--grey-light4)
+}
+/////////////////////////////////////////////////////////
+//////////////////////gallery
 
+.gallery{
+    display: flex;
 
+    &_item{
+        
+    }
+
+    &_photo{
+        width: 100%;
+    }
+}
+
+.overview{
+    display: flex;
+    border-bottom: 2px solid var(--grey-light3);
+    align-items: center;
+    
+    &_heading{
+        font-size: 2.25rem;
+        font: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--primary);
+        padding: 1.5rem 3rem;
+
+    }
+    &_stars{
+        margin-right: auto;
+        display: flex;
+
+    }
+    &_icon-stars,
+    &_icon-location{
+        height: 1.75rem;
+        width: 1.75rem;
+        fill: var(--primary);
+
+    }
+    &_location{
+        font-size: 1.2rem;
+        display: flex;
+        vertical-align: center;
+    }
+    &_icon-location{
+        margin-right: 0.5rem;
+    }
+    &_rating{
+        margin-left: 0.5rem;
+        font-size: 1.25rem;
+
+    }
+    
+    &_rating_average{
+        
+    }
+    &_rating_count{
+        
+    }
+
+}
+
+////////////////////////////////////////////////////////
+///////////////////////btn-inline
+
+.btn-inline{
+    border: none;
+    display: inline-block;
+    color: var(--primary);
+    font-size: inherit;
+    border-bottom: 1px solid currentColor;
+    &:hover{
+        color: var(--grey-dark);
+    }
+    &:focus{
+        outline: none;
+        animation: pulse 1s infinite;
+    }
+}
+@keyframes pulse{
+    0%{
+        box-shadow: none;
+        transform: scale(1);
+    }
+    50%{
+        box-shadow: 0 1rem 4rem rgba(0,0,0,0.25) ;
+        transform: scale(1.05);
+    }
+    100%{
+        box-shadow: none;
+        transform: scale(1);
+    }
 }
